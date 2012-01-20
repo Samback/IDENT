@@ -31,7 +31,7 @@ import javax.swing.filechooser.FileView;
 
 public class FilterSample {
 
-  public static void main(String args[]) {
+  public static void main1(String args[]) {
     JFrame frame = new JFrame("JFileChooser Filter Popup");
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     Container contentPane = frame.getContentPane();
