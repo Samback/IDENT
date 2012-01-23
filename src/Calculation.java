@@ -139,6 +139,7 @@ public class Calculation {
 		{
 			i1 = i2 / 10;
 			i4 = i2 - 10 * i1 -1;
+			//!!!:Check is it right to do so.			
 			s1 *= inputMatrix[i][i4];
 			if (i1 == 0)
 				return(s1);
@@ -191,8 +192,6 @@ public class Calculation {
 	}
 
 	private void crout2 (Double as[][], Double bs[], Integer n, Integer ir, Double iv[]) throws IDENTException
-	//double as[IM][IM], *bs,*ys;
-	//int n,ir,*iv;
 	{
 		int i, k, imax = 0, p;
 		double A[][] = new double[NumberOfPolinomes][NumberOfPolinomes];
@@ -209,7 +208,6 @@ public class Calculation {
 				A[j][z] = 0;
 			}
 		}
-
 
 		for (i = 0; i < n; i++ )
 			b[i]=bs[i];
@@ -267,9 +265,9 @@ public class Calculation {
 					b[imax] = t;
 				}
 				if (A[k][k] == 0) {
-//					System.out.println("error det=0\n");
-//					throw new IDENTException("division by zero");
-					t = 0;
+					System.out.println("error det=0\n");
+					throw new IDENTException("division by zero");
+					//t = 0;
 				}
 				else
 				 t = 1 / A[k][k];
